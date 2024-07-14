@@ -20,7 +20,7 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
                  );
             case 2:
             return (
-                  <div id="step2">
+                  <div id="#step2">
                    <h2>Car Details</h2>
                    <label>Car Model:</label>
                      <br/>
