@@ -18,22 +18,22 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
                         <input type="text" id="last_name" value={last_name} onChange={handleChange('last_name')} />
                     </div>
                  );
-      case 2:
-        return (
-          <div id="step2">
-            <h2>Car Details</h2>
-            <label>Car Model:</label>
-            <br/>
-            <input type="text" id="model" value={model} onChange={handleChange('model')} />
-            <br />
-            <br />
-            <label>Car Price:</label>
-            <br/>
-            <input type="text" id="car_price" value={car_price} onChange={handleChange('car_price')} />
-          </div>
-        );
-      case 3:
-        return (
+            case 2:
+            return (
+                  <div id="step2">
+                   <h2>Car Details</h2>
+                   <label>Car Model:</label>
+                     <br/>
+                    <input type="text" id="model" value={model} onChange={handleChange('model')} />
+                    <br />
+                    <br />
+                    <label>Car Price:</label>
+                   <br/>
+                   <input type="text" id="car_price" value={car_price} onChange={handleChange('car_price')} />
+                 </div>
+            );
+           case 3:
+           return (
           <div id="step3">
             <h2>Payment Details:</h2>
             <label>Crredit Card Number:</label>
