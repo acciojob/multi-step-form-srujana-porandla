@@ -85,7 +85,7 @@ import React from 'react';
 
 const Step1 = ({ data, updateData }) => {
   return (
-    <div className="step">
+    <div id="step1">
       <h2>Personal Information</h2>
       <label>First Name:</label>
       <input type="text" id="first_name" value={data.first_name} onChange={updateData} />
