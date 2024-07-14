@@ -83,7 +83,7 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
 export default Step;*/
 import React from 'react';
 
-const Step = ({ data, updateData }) => {
+const Step1 = ({ data, updateData }) => {
   return (
     <div className="step">
       <h2>Personal Information</h2>
@@ -96,7 +96,7 @@ const Step = ({ data, updateData }) => {
   );
 };
 
-export default Step;
+export default Step1;
 
             
         

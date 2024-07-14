@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
 import './../styles/App.css';
-import Step from './Step';
+import Step1 from './Step1';
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 
@@ -20,13 +20,6 @@ const updateData=()=>{
   setCurrentStep(currentStep+1);
 };
 
-const prevStep=()=>{
-  setCurrentStep(currentStep-1);
-};
-
-const handleChange=(input)=>(e)=>{
-  setFormData({...formData,[input]:e.target.value});
-};
 
 const handleSubmit=(e)=>{
   e.preventDefault();
@@ -35,7 +28,7 @@ const handleSubmit=(e)=>{
   return (
     <div className="App" >
       <div className="form-container">
-        {currentStep === 1 && <Step data={formData} updateData={updateData} />}
+        {currentStep === 1 && <Step1 data={formData} updateData={updateData} />}
         {currentStep === 2 && <Step2 data={formData} updateData={updateData} />}
         {currentStep === 3 && <Step3 data={formData} updateData={updateData} handleSubmit={handleSubmit} />}
         
