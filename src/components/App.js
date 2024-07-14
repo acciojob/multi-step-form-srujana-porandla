@@ -2,6 +2,8 @@
 import React, {useState} from "react";
 import './../styles/App.css';
 import Step from './Step';
+import Step2 from "./Step2";
+import Step3 from "./Step3";
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -14,7 +16,7 @@ const [formData, setFormData] = useState({
   expiry_date: ''
 });
 
-const nextStep=()=>{
+const updateData=()=>{
   setCurrentStep(currentStep+1);
 };
 
@@ -32,14 +34,18 @@ const handleSubmit=(e)=>{
 }
   return (
     <div className="App" >
-      <Step
-        currentStep={currentStep}
-        formData={formData}
-        handleChange={handleChange}
-        nextStep={nextStep}
-        prevStep={prevStep}
-        handleSubmit={handleSubmit}
-      />
+      <div className="form-container">
+        {currentStep === 1 && <Step data={formData} updateData={updateData} />}
+        {currentStep === 2 && <Step2 data={formData} updateData={updateData} />}
+        {currentStep === 3 && <Step3 data={formData} updateData={updateData} handleSubmit={handleSubmit} />}
+        
+        {/* Navigation buttons */}
+        <div className="buttons">
+          {currentStep > 1 && <button onClick={() => setCurrentStep(currentStep - 1)}>Previous</button>}
+          {currentStep < 3 && <button onClick={() => setCurrentStep(currentStep + 1)}>Next</button>}
+          {currentStep === 3 && <button onClick={handleSubmit}>Submit</button>}
+        </div>
+      </div>
     </div>
   )
 }

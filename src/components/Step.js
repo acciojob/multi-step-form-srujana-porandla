@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=>{
     const {first_name, last_name,model,car_price,card_info,expiry_date}=formData;
@@ -80,7 +80,24 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
   );
 };
 
+export default Step;*/
+import React from 'react';
+
+const Step = ({ data, updateData }) => {
+  return (
+    <div className="step">
+      <h2>Personal Information</h2>
+      <label>First Name:</label>
+      <input type="text" id="first_name" value={data.first_name} onChange={updateData} />
+      <br />
+      <label>Last Name:</label>
+      <input type="text" id="last_name" value={data.last_name} onChange={updateData} />
+    </div>
+  );
+};
+
 export default Step;
+
             
         
             
