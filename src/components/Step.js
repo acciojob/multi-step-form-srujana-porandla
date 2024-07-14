@@ -6,7 +6,7 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
         switch(currentStep){
             case 1:
                 return (
-                    <div>
+                    <div id="step1">
                          <h2>Customer Details</h2>
                         <label>First Name:</label>
                         <br/>
@@ -20,7 +20,7 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
                  );
       case 2:
         return (
-          <div>
+          <div id="step2">
             <h2>Car Details</h2>
             <label>Car Model:</label>
             <br/>
@@ -34,7 +34,7 @@ const Step=({currentStep,formData,prevStep,nextStep,handleChange,handleSubmit})=
         );
       case 3:
         return (
-          <div>
+          <div id="step3">
             <h2>Payment Details:</h2>
             <label>Crredit Card Number:</label>
             <br/>
