@@ -45,19 +45,19 @@ const Step = ({ currentStep, formData, handleChange, nextStep, prevStep, handleS
 
   const renderButtons = () => {
     if (currentStep === 1) {
-      return <button className="next" onClick={nextStep}>Next</button>;
+      return <button type="button" className="next" onClick={nextStep}>Next</button>;
     } else if (currentStep === 3) {
       return (
         <div>
-          <button className="prev" onClick={prevStep}>Previous</button>
-          <button className="submit" onClick={handleSubmit}>Submit</button>
+          <button type="button" className="prev" onClick={prevStep}>Previous</button>
+          <button type="button" className="submit" onClick={handleSubmit}>Submit</button>
         </div>
       );
     } else {
       return (
         <div>
-          <button className="prev" onClick={prevStep}>Previous</button>
-          <button className="next" onClick={nextStep}>Next</button>
+          <button type="button" className="prev" onClick={prevStep}>Previous</button>
+          <button type="button" className="next" onClick={nextStep}>Next</button>
         </div>
       );
     }
